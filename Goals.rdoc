@@ -1,0 +1,13 @@
+Goals
+
+
+
+Integrate Devise login
+
+develope Blog model
+
+create pageable blog view
+
+make blog posts taggable
+
+create filter view of taggable blog posts
