@@ -5,11 +5,7 @@ class BloggersController < ApplicationController
   end
 
   def show
-    if params[:blogger_id]
-      @blogger = Blogger.where(id: params[:id])
-    else
-      @blogger = Blogger.where(id: params[:id])
-    end
+      @blogger = Blogger.find_by(id: params[:id])
 
   end
 end
