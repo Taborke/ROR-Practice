@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
-  resources :entries
+  get 'bloggers/index'
+
+  get 'bloggers/show'
+
+  resources :entries, only: [:show, :index]
+  get 'tags/:tag', to: 'entries#index', as: :tag
 
   devise_for :bloggers
+  resources :bloggers do
+    resources :entries
+  end
+
+
+
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

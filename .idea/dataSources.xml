@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2045188271">
+    <data-source source="LOCAL" name="Rails ROR-Practice: development" uuid="d014ff1e-3cb8-41a9-8fd1-323c35bafd7a">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/blurb_dev</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails ROR-Practice: test" uuid="0c86da96-6977-4bac-9f70-4aa46bb6c53e">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/blurb_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails ROR-Practice: production" uuid="70fb4dac-92ab-4ae7-a785-ee83c4c41585">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/blurb_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

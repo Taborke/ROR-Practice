@@ -16,10 +16,13 @@
       <tr>
         <td><%= entry.feeling %></td>
         <td><%= entry.blurb %></td>
-        <td><%= entry.blogger %></td>
-        <td><%= entry.tags %></td>
+        <td><%= entry.blogger.email %></td>
+        <td><% entry.tags.each do |tag| %>
+                <%= tag.name %>
+            <% end %>
+        </td>
         <td><%= link_to 'Show', entry %></td>
-        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+        <td><%= link_to 'Edit', edit_blogger_entry_path(current_blogger, entry) %></td>
         <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -27,5 +30,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Entry', new_entry_path %>

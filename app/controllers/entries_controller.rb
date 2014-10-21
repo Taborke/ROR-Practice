@@ -1,12 +1,16 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_blogger!, only: :create
-  before_action :set_blogger, only: :create
+  before_action :authenticate_blogger!, except: [:index, :show]
+  before_action :set_blogger, except: [:index, :show]
 
 
   respond_to :html, :xml, :json
   def index
-    @entries = Entry.all
+    if params[:blogger_id]
+      @entries = Entry.where(blogger_id: params[:blogger_id])
+    else
+      @entries = Entry.all
+    end
     respond_with(@entries)
   end
 
@@ -15,7 +19,7 @@ class EntriesController < ApplicationController
   end
 
   def new
-    @entry = Entry.new
+    @entry = @blogger.entries.new
     respond_with(@entry)
   end
 
@@ -23,8 +27,7 @@ class EntriesController < ApplicationController
   end
 
   def create
-    @entry = Entry.new(entry_params)
-    #@entry.blogger = @blogger.id
+    @entry = @blogger.entries.new(entry_params)
     @entry.save
     respond_with(@entry)
   end
@@ -49,6 +52,6 @@ class EntriesController < ApplicationController
     end
 
     def entry_params
-      params.require(:entry).permit(:feeling, :blurb, :blogger_id, :tags => [ :name => [] ])
+      params.require(:entry).permit(:feeling, :blurb, :blogger_id, :tag_list)
     end
 end

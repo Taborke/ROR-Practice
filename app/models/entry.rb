@@ -1,4 +1,7 @@
 class Entry < ActiveRecord::Base
   belongs_to :blogger
-  has_many :tags
+
+  validates_presence_of :blogger_id
+
+  acts_as_taggable
 end

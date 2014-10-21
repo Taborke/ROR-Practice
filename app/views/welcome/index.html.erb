@@ -1,12 +1,13 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-
+<h1>Welcome <%= @blogger %></h1>
 <% @entries.each do |ent| %>
 	Feeling:
-	<%= ent.feeling %></br>
+	<%= ent.feeling %><br>
 	<p><%= ent.blurb %></p>
-	<%= ent.created_at %>
+    <strong>Tags:</strong>
+    <% ent.tags.each do |tag| %>
+        <%= tag.name %>
+    <% end %>
+	<%= ent.created_at %> by <%= @blogger %>
 	<br>
 	<% end %>
 <br><br>
-	<%= link_to "New Blurb", new_entry_path %>

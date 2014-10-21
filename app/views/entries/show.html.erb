@@ -12,13 +12,15 @@
 
 <p>
   <strong>Blogger:</strong>
-  <%= @entry.blogger %>
+  <%= @entry.blogger.email %>
 </p>
 
 <p>
   <strong>Tags:</strong>
-  <%= @entry.tags %>
+  <% @entry.tags.each do |tag| %>
+    <%= tag.name %>
+  <% end %>
 </p>
 
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Edit', edit_blogger_entry_path(current_blogger, @entry) %> |
 <%= link_to 'Back', entries_path %>
