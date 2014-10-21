@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020180453) do
+ActiveRecord::Schema.define(version: 20141021012126) do
 
   create_table "bloggers", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -34,8 +34,20 @@ ActiveRecord::Schema.define(version: 20141020180453) do
   create_table "entries", force: true do |t|
     t.string   "feeling"
     t.text     "blurb"
+    t.integer  "blogger_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "entries", ["blogger_id"], name: "index_entries_on_blogger_id"
+
+  create_table "tags", force: true do |t|
+    t.integer  "entry_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tags", ["entry_id"], name: "index_tags_on_entry_id"
 
 end

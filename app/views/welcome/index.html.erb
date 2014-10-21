@@ -1,2 +1,9 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+
+<%= @entries.each do |ent| %>
+	<h3>Feeling</h3><%= ent.feeling %>
+	<p><%= ent.blurb %></p>
+	<% end %>
+
+	<%= link_to "New Blurb", new_entry_path %>

@@ -3,7 +3,11 @@
 one:
   feeling: MyString
   blurb: MyText
+  blogger_id: 
+  tags: 
 
 two:
   feeling: MyString
   blurb: MyText
+  blogger_id: 
+  tags: 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :entries
+
   devise_for :bloggers
   get 'welcome/index'
 
