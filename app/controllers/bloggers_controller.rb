@@ -6,6 +6,5 @@ class BloggersController < ApplicationController
 
   def show
       @blogger = Blogger.find_by(id: params[:id])
-
   end
 end
