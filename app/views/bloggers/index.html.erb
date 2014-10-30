@@ -1,5 +1,5 @@
 <h1>Bloggers#index</h1>
 <p>Find me in app/views/bloggers/index.html.erb</p>
 <% @bloggers.each do |bl| %>
-    <%= link_to bl.name, blogger_path(bl) %>
+    <%= link_to bl.name, blogger_entries_path(bl) %>
 <% end %>

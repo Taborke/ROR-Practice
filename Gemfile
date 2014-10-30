@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'foundation-rails'
 gem 'acts-as-taggable-on'
-
+gem 'cancan'
 
 group :development  do
 	gem 'rails_layout'

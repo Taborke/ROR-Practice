@@ -4,7 +4,7 @@ class Blogger < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
+  ROLES = %w[admin moderator author]
   has_many :entries      
 
   

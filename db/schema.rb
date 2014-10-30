@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141021202651) do
+ActiveRecord::Schema.define(version: 20141029213231) do
 
   create_table "bloggers", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20141021202651) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "role"
   end
 
   add_index "bloggers", ["email"], name: "index_bloggers_on_email", unique: true, using: :btree
