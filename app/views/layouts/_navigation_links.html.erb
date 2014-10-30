@@ -1,14 +1,13 @@
 <%# add navigation links to this file %>
-<ul class="left">
-<li><%= link_to 'Home', root_path %></li>
+
 <% if blogger_signed_in? %>
-  <li><%= link_to "Edit Profile", edit_blogger_registration_path, :class => 'navbar-link' %></li>
-  <li><%= link_to "Logout #{current_blogger.email}", destroy_blogger_session_path, method: :delete, :class => 'navbar-link'  %></li>
-    <li><%= link_to "NEW ENTRY!", new_blogger_entry_path(current_blogger), :class => 'navbar-link' %></li>
-    <li><%= link_to "My Shit", blogger_entries_path(current_blogger), :class => 'navbar-link' %></li>
-    <li><%= link_to "Other Wankers", bloggers_path, :class => 'navbar-link' %></li>
+  Logged in as <strong><%= current_blogger.email %></strong>.
+  <%= link_to 'Edit profile', edit_blogger_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_blogger_session_path, method: :delete, :class => 'navbar-link'  %>
+  <%= link_to "NEW ENTRY!", new_blogger_entry_path(current_blogger), :class => 'navbar-link' %>
+  <%= link_to "My Shit", blogger_entries_path(current_blogger), :class => 'navbar-link' %>
+  <%= link_to "Other Wankers", bloggers_path, :class => 'navbar-link' %>
 <% else %>
-  <li><%= link_to "Sign up", new_blogger_registration_path, :class => 'navbar-link'  %></li>
-  <li><%= link_to "Login", new_blogger_session_path, :class => 'navbar-link'  %></li>
+  <%= link_to "Sign up", new_blogger_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_blogger_session_path, :class => 'navbar-link'  %>
 <% end %>
- </ul>
