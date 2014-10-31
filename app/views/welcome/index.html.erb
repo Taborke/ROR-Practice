@@ -1,13 +1,20 @@
 <h1>Welcome to Blurby!</h1>
 
 <% @latest_posts.each do |ent| %>
+    <div class = "row">
+    <div class="small-6 columns">
     Feeling:
     <%= ent.feeling %><br>
-    <p><%= ent.blurb %> <%= link_to "MORE", entry_path(id: ent.id) %></p>
+    <%= ent.blurb %> <%= link_to "MORE", entry_path(id: ent.id) %>
+    <br>
     <strong>Tags:</strong>
     <% ent.tags.each do |tag| %>
         <%= tag.name %>
     <% end %>
-    <%= ent.created_at %> by <%= link_to "USER #{ent.user_id}", user_entries_path( user_id: ent.user_id) %>
+      <br>
+    <%= distance_of_time_in_words(ent.created_at, @time_now) %> ago by <%= link_to "USER #{ent.user_id}", user_entries_path( user_id: ent.user_id) %>
     <br>
+      </div>
+    </div>
+    <br><br>
 <% end %>
