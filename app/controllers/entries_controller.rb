@@ -42,6 +42,6 @@ class EntriesController < ApplicationController
     end
 
     def entry_params
-      params.require(:entry).permit(:feeling, :blurb)
+      params.require(:entry).permit(:feeling, :blurb, :tag_list)
     end
 end

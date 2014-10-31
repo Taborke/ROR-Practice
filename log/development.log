@@ -5208,3 +5208,939 @@ Processing by EntriesController#new as HTML
   Rendered layouts/_navigation.html.erb (3.7ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 293ms (Views: 291.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/new" for 127.0.0.1 at 2014-10-31 11:49:21 -0500
+Processing by EntriesController#new as HTML
+  Rendered entries/_form.html.erb (48.8ms)
+  Rendered entries/new.html.erb within layouts/application (50.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (33.9ms)
+  Rendered layouts/_navigation.html.erb (35.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 418ms (Views: 385.7ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-31 11:49:21 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-31 11:49:21 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-31 11:49:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-31 11:49:21 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2014-10-31 11:49:22 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:23 -0500
+
+
+Started POST "/entries" for 127.0.0.1 at 2014-10-31 11:49:50 -0500
+Processing by EntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xTT+bQFyEH/vPKwBNyMwNK7SRn3JQfZa/oE0QI3Nqas=", "entry"=>{"feeling"=>"Good", "blurb"=>"I think Im getting the hang of this", "tag_list"=>"woohoo, fuckyeah, ImANoob"}, "commit"=>"Create Entry"}
+Unpermitted parameters: tag_list
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `entries` (`blurb`, `created_at`, `feeling`, `updated_at`) VALUES ('I think Im getting the hang of this', '2014-10-31 16:49:50', 'Good', '2014-10-31 16:49:50')
+  [1m[36m (31.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/entries/2
+Completed 302 Found in 45ms (ActiveRecord: 32.4ms)
+
+
+Started GET "/entries/2" for 127.0.0.1 at 2014-10-31 11:49:50 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEntry Load (0.5ms)[0m  SELECT  `entries`.* FROM `entries`  WHERE `entries`.`id` = 2 LIMIT 1
+  Rendered entries/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (2.8ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 852ms (Views: 847.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-10-31 11:49:51 -0500
+
+
+Started GET "/users/1/entries" for 127.0.0.1 at 2014-10-31 11:50:02 -0500
+Processing by EntriesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mEntry Load (0.4ms)[0m  SELECT `entries`.* FROM `entries`
+  Rendered entries/index.html.erb within layouts/application (83.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (3.7ms)
+  Rendered layouts/_navigation.html.erb (4.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 275ms (Views: 273.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/entries" for 127.0.0.1 at 2014-10-31 11:51:50 -0500
+Processing by EntriesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mEntry Load (0.4ms)[0m  SELECT `entries`.* FROM `entries`
+  Rendered entries/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (3.5ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 282ms (Views: 279.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2014-10-31 11:51:50 -0500
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-31 11:51:50 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-31 11:51:51 -0500
+
+
+Started GET "/users/1/entries" for 127.0.0.1 at 2014-10-31 11:53:23 -0500
+Processing by EntriesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mEntry Load (0.4ms)[0m  SELECT `entries`.* FROM `entries`
+  Rendered entries/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError - undefined method `tags_list' for #<Entry:0x007f8db5829048>:
+  activemodel (4.1.6) lib/active_model/attribute_methods.rb:435:in `method_missing'
+  activerecord (4.1.6) lib/active_record/attribute_methods.rb:211:in `method_missing'
+  app/views/entries/index.html.erb:19:in `block in _app_views_entries_index_html_erb___3114217389485315996_70123283944600'
+  activerecord (4.1.6) lib/active_record/relation/delegation.rb:46:in `each'
+  activerecord (4.1.6) lib/active_record/relation/delegation.rb:46:in `each'
+  app/views/entries/index.html.erb:14:in `_app_views_entries_index_html_erb___3114217389485315996_70123283944600'
+  actionview (4.1.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/Kevin/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:238:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:165:in `to_html'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:158:in `respond'
+  actionpack (4.1.6) lib/action_controller/metal/responder.rb:151:in `call'
+  actionpack (4.1.6) lib/action_controller/metal/mime_responds.rb:400:in `respond_with'
+  app/controllers/entries_controller.rb:8:in `index'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Kevin/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Kevin/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Kevin/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/6e1a4453907be307/variables" for 127.0.0.1 at 2014-10-31 11:53:23 -0500
+
+
+Started GET "/users/1/entries" for 127.0.0.1 at 2014-10-31 11:53:37 -0500
+Processing by EntriesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mEntry Load (0.5ms)[0m  [1mSELECT `entries`.* FROM `entries`[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.9ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Entry' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Entry' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  Rendered entries/index.html.erb within layouts/application (13.9ms)
+  [1m[35mUser Load (4.8ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (7.8ms)
+  Rendered layouts/_navigation.html.erb (8.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 211ms (Views: 202.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-31 11:53:37 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-31 11:53:37 -0500
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2014-10-31 11:53:37 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-10-31 11:53:38 -0500
+
+
+Started GET "/users/1/entries" for 127.0.0.1 at 2014-10-31 11:55:28 -0500
+Processing by EntriesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mEntry Load (0.4ms)[0m  [1mSELECT `entries`.* FROM `entries`[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Entry' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 2 AND `taggings`.`taggable_type` = 'Entry' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  Rendered entries/index.html.erb within layouts/application (8.5ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (4.8ms)
+  Rendered layouts/_navigation.html.erb (5.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 286ms (Views: 282.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2014-10-31 11:55:29 -0500
+
+
+Started GET "/entries/1" for 127.0.0.1 at 2014-10-31 11:55:37 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEntry Load (0.4ms)[0m  [1mSELECT  `entries`.* FROM `entries`  WHERE `entries`.`id` = 1 LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'Entry' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  Rendered entries/show.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (2.9ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 280ms (Views: 276.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1/entries/new" for 127.0.0.1 at 2014-10-31 11:57:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by EntriesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered entries/_form.html.erb (119.3ms)
+  Rendered entries/new.html.erb within layouts/application (131.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (29.5ms)
+  Rendered layouts/_navigation.html.erb (31.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 1002ms (Views: 817.4ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:13 -0500
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:14 -0500
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:14 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:14 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:14 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:14 -0500
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:14 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:14 -0500
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:14 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:14 -0500
+
+
+Started POST "/entries" for 127.0.0.1 at 2014-10-31 11:57:50 -0500
+Processing by EntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xTT+bQFyEH/vPKwBNyMwNK7SRn3JQfZa/oE0QI3Nqas=", "entry"=>{"feeling"=>"worried", "blurb"=>"For some reason the Tag list is not being saved", "tag_list"=>"ohnoes, woot, fuckme, ImAnoob"}, "commit"=>"Create Entry"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `entries` (`blurb`, `created_at`, `feeling`, `updated_at`) VALUES ('For some reason the Tag list is not being saved', '2014-10-31 16:57:50', 'worried', '2014-10-31 16:57:50')
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags`  WHERE (LOWER(name) = LOWER('ohnoes') OR LOWER(name) = LOWER('woot') OR LOWER(name) = LOWER('fuckme') OR LOWER(name) = LOWER('imanoob'))[0m
+  [1m[35mActsAsTaggableOn::Tag Exists (0.4ms)[0m  SELECT  1 AS one FROM `tags`  WHERE `tags`.`name` = BINARY 'ohnoes' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `tags` (`name`) VALUES ('ohnoes')[0m
+  [1m[35mActsAsTaggableOn::Tag Exists (0.5ms)[0m  SELECT  1 AS one FROM `tags`  WHERE `tags`.`name` = BINARY 'woot' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `tags` (`name`) VALUES ('woot')[0m
+  [1m[35mActsAsTaggableOn::Tag Exists (0.5ms)[0m  SELECT  1 AS one FROM `tags`  WHERE `tags`.`name` = BINARY 'fuckme' LIMIT 1
+  [1m[36mSQL (15.9ms)[0m  [1mINSERT INTO `tags` (`name`) VALUES ('fuckme')[0m
+  [1m[35mActsAsTaggableOn::Tag Exists (0.4ms)[0m  SELECT  1 AS one FROM `tags`  WHERE `tags`.`name` = BINARY 'ImAnoob' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `tags` (`name`) VALUES ('ImAnoob')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Entry' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `taggings`  WHERE (`taggings`.`tag_id` = BINARY 1 AND `taggings`.`taggable_type` = 'Entry' AND `taggings`.`taggable_id` = 3 AND `taggings`.`context` = 'tags' AND `taggings`.`tagger_id` IS NULL AND `taggings`.`tagger_type` IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `taggings` (`context`, `created_at`, `tag_id`, `taggable_id`, `taggable_type`) VALUES ('tags', '2014-10-31 16:57:50', 1, 3, 'Entry')
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1mSELECT  `tags`.* FROM `tags`  WHERE `tags`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (15.4ms)[0m  UPDATE `tags` SET `taggings_count` = COALESCE(`taggings_count`, 0) + 1 WHERE `tags`.`id` = 1
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `taggings`  WHERE (`taggings`.`tag_id` = BINARY 2 AND `taggings`.`taggable_type` = 'Entry' AND `taggings`.`taggable_id` = 3 AND `taggings`.`context` = 'tags' AND `taggings`.`tagger_id` IS NULL AND `taggings`.`tagger_type` IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `taggings` (`context`, `created_at`, `tag_id`, `taggable_id`, `taggable_type`) VALUES ('tags', '2014-10-31 16:57:50', 2, 3, 'Entry')
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT  `tags`.* FROM `tags`  WHERE `tags`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `tags` SET `taggings_count` = COALESCE(`taggings_count`, 0) + 1 WHERE `tags`.`id` = 2
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `taggings`  WHERE (`taggings`.`tag_id` = BINARY 3 AND `taggings`.`taggable_type` = 'Entry' AND `taggings`.`taggable_id` = 3 AND `taggings`.`context` = 'tags' AND `taggings`.`tagger_id` IS NULL AND `taggings`.`tagger_type` IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `taggings` (`context`, `created_at`, `tag_id`, `taggable_id`, `taggable_type`) VALUES ('tags', '2014-10-31 16:57:50', 3, 3, 'Entry')
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1mSELECT  `tags`.* FROM `tags`  WHERE `tags`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `tags` SET `taggings_count` = COALESCE(`taggings_count`, 0) + 1 WHERE `tags`.`id` = 3
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `taggings`  WHERE (`taggings`.`tag_id` = BINARY 4 AND `taggings`.`taggable_type` = 'Entry' AND `taggings`.`taggable_id` = 3 AND `taggings`.`context` = 'tags' AND `taggings`.`tagger_id` IS NULL AND `taggings`.`tagger_type` IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `taggings` (`context`, `created_at`, `tag_id`, `taggable_id`, `taggable_type`) VALUES ('tags', '2014-10-31 16:57:50', 4, 3, 'Entry')
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT  `tags`.* FROM `tags`  WHERE `tags`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `tags` SET `taggings_count` = COALESCE(`taggings_count`, 0) + 1 WHERE `tags`.`id` = 4
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/entries/3
+Completed 302 Found in 477ms (ActiveRecord: 92.8ms)
+
+
+Started GET "/entries/3" for 127.0.0.1 at 2014-10-31 11:57:50 -0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEntry Load (0.4ms)[0m  SELECT  `entries`.* FROM `entries`  WHERE `entries`.`id` = 3 LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 3 AND `taggings`.`taggable_type` = 'Entry' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  Rendered entries/show.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (2.6ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 266ms (Views: 261.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-10-31 11:57:51 -0500
