@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_blogger, except: [:index, :show]
   respond_to :html, :xml, :json
 
@@ -26,6 +27,7 @@ class EntriesController < ApplicationController
 
   def create
     @entry = Entry.new(entry_params)
+    @entry.user_id = @blogger || "Guest"
     @entry.save
     respond_with(@entry)
   end
@@ -46,7 +48,7 @@ class EntriesController < ApplicationController
     end
 
     def set_blogger
-      @blogger = current_user
+      @blogger = current_user.id
     end
 
     def entry_params
