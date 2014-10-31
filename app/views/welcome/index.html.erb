@@ -1,5 +1,5 @@
 <h1>Welcome to Blurby!</h1>
-
+<%= foundation_paginate @latest_posts %>
 <% @latest_posts.each do |ent| %>
     <div class = "row">
     <div class="small-6 columns">
@@ -18,3 +18,4 @@
     </div>
     <br><br>
 <% end %>
+

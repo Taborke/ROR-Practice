@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'tag/index'
+
+  get 'tag/show'
+
   get 'user/index'
 
   get 'user/show'
@@ -6,7 +10,7 @@ Rails.application.routes.draw do
   resources :entries
 
   get 'welcome/index'
-
+  get 'welcome/taggings'
   devise_for :users
 
   resources :users do
