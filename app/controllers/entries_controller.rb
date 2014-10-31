@@ -2,14 +2,19 @@ class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_blogger, except: [:index, :show]
+
+
+
   respond_to :html, :xml, :json
 
   def index
     if params[:user_id]
       @entries = Entry.where(user_id: params[:user_id])
+      @this_user = User.find(params[:user_id]).name
     else
       @entries = Entry.all
     end
+
     respond_with(@entries)
   end
 
