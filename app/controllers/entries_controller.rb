@@ -1,10 +1,14 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_blogger, except: [:index, :show]
   respond_to :html, :xml, :json
 
   def index
-    @entries = Entry.all
+    if params[:user_id]
+      @entries = Entry.where(user_id: params[:user_id])
+    else
+      @entries = Entry.all
+    end
     respond_with(@entries)
   end
 
@@ -41,7 +45,11 @@ class EntriesController < ApplicationController
       @entry = Entry.find(params[:id])
     end
 
+    def set_blogger
+      @blogger = current_user
+    end
+
     def entry_params
-      params.require(:entry).permit(:feeling, :blurb, :tag_list)
+      params.require(:entry).permit(:feeling, :blurb, :tag_list, :user_id)
     end
 end

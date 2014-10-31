@@ -10,5 +10,5 @@ bigboss = User.create({name: 'BossHoss', role: 'admin', email: 'boss@hoss.com', 
 authR = User.create({name: 'bloggerhead', role: 'author', email: 'a@a.com', password: 'ilovetoblog', password_confirmation: 'ilovetoblog'})
 modr = User.create({name: 'moddy', role: 'moderator', email: 'modr@modr.com', password: 'modrmodr', password_confirmation: 'modrmodr'})
 
-ent1 = Entry.create({feeling: 'good', blurb: 'Hey does this thing work?', user_id: '1'})
-ent1.tag_list.add(["new","working"])
+ent1 = Entry.create({feeling: 'good', blurb: 'Hey does this thing work?', user_id: '1', tag_list: ["new","working"]})
+ent2 = Entry.create({feeling: 'worried', blurb: 'I hope the tags are working', user_id: '2', tag_list: ["Ohnoes", "workn", "IamANoob"]})
