@@ -8,11 +8,16 @@ class EntriesController < ApplicationController
   respond_to :html, :xml, :json
 
   def index
+
     if params[:user_id]
       @entries = Entry.where(user_id: params[:user_id])
       @this_user = User.find(params[:user_id]).name
     else
       @entries = Entry.all
+    end
+
+    if params[:tag]
+      @entries = Entry.tagged_with(params[:tag])
     end
 
     respond_with(@entries)

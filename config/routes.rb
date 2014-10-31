@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-  get 'tag/index'
-
-  get 'tag/show'
-
   get 'user/index'
 
   get 'user/show'
-
+  get 'tags/:tag', to: 'entries#index', as: :tag
   resources :entries
 
   get 'welcome/index'

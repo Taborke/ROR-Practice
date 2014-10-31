@@ -16,9 +16,8 @@
         <td><%= entry.feeling %></td>
         <td><%= entry.blurb %></td>
         <td>
-          <% entry.tag_list.each do |t| %>
-              <%= t %>
-          <% end %>
+          <%#= entry.tag_list %>
+          Tags: <%= raw entry.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
         </td>
 
             <td><%= link_to 'Show', entry %></td>

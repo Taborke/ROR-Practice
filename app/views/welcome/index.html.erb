@@ -9,7 +9,7 @@
     <br>
     <strong>Tags:</strong>
     <% ent.tags.each do |tag| %>
-        <%= tag.name %>
+        <%= link_to tag.name, tag_path(tag.name) %>
     <% end %>
       <br>
     <%= distance_of_time_in_words(ent.created_at, @time_now) %> ago by <%= link_to "USER #{ent.user_id}", user_entries_path( user_id: ent.user_id) %>

@@ -1,4 +1,4 @@
 <% @tags.each do |hashatagah|%>
-<%= hashatagah.name %> <%= hashatagah.taggings_count %> <br>
+<%= link_to "#{hashatagah.name}, #{hashatagah.taggings_count}", tag_path(hashatagah.name) %> <br>
 
 <% end %>
